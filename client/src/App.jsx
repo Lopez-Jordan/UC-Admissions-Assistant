@@ -1,4 +1,5 @@
 import './App.css';
+import Chatbot from './Chatbot';
 
 export default function App() {
   
@@ -7,18 +8,19 @@ export default function App() {
       <section className="page1">
         <div className="half1">
           <div className="content1">
-            <h2 id='message'>message a ...</h2>
+            <h2 id='message'>ask a ...</h2>
             <h1 id='mainHeading'>UC Admission Officer</h1>
           </div>
           <img id="emblem" src="/emblem.png" alt="" />
+          <div style={{height: '200px'}}></div>
+          <p className='powered'>*powered by Chat GPT 3.5-turbo*</p>
         </div>
 
 
         <div className="half2">
-          <div className='content2'>
-          
-          </div>
+            <Chatbot />
         </div>
+        
 
       </section>
     </>

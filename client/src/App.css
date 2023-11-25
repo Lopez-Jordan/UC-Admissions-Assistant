@@ -4,12 +4,11 @@
     display: flex;
 }
 
-.half1,
-.half2 {
+.half1 {
     flex: 1;
     display: flex;
     flex-direction: column;
-    margin-top: 15%;
+    margin-top: 10%;
 }
 
 .content1, .content2 {
@@ -34,23 +33,26 @@
     font-weight: 600;
     letter-spacing: 1.5px;
 }
-
 #emblem {
     width: 350px;
     height: auto;
 }
 
 .half1 {
+    justify-content: space-between;
+    align-items: center;
+}
+.half2{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
     justify-content: start;
     align-items: center; 
 }
 
-.content2{
-    background-color: white;
+.powered{
+    color: white;
+    margin-bottom: 5%;
+    float: left;
+    font-size: 16px;
 }
-
-.half2 {
-    justify-content: start;
-    align-items: center; 
-}
-
