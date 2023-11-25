@@ -1,0 +1,19 @@
+{
+  "name": "utils",
+  "version": "1.0.0",
+  "description": "",
+  "main": "LLM.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.33.2",
+    "dotenv": "^16.3.1",
+    "fs": "^0.0.1-security",
+    "langchain": "^0.0.151"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
