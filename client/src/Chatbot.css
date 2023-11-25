@@ -1,4 +1,4 @@
-/* Chatbot.css */
+
 
 .main {
     height: 70vh;
@@ -19,6 +19,9 @@
     background-color: white;
     border-radius: 10px;
     padding: 20px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: start;
 }
 
 .input-container {
@@ -27,6 +30,8 @@
     background-color: white;
     border-radius: 10px;
     margin: 0 8px 8px 8px;
+    height: 100px;
+    justify-content: space-around;
 }
 
 #inputText {
@@ -34,9 +39,12 @@
     border: none;
     resize: none;
     outline: none;
-    padding: 16px;
+    height: 80px;
     border-radius: 10px;
-    margin-right: 10px;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    line-height: 22px;
+    padding: 10px 0 10px 10px;
 }
 
 #submitButton {
@@ -44,12 +52,11 @@
     outline: none;
     background-color: #ffc402;
     color: white;
-    padding: 15px;
+    padding: 6px;
     border-radius: 10px;
-    margin-right: 5px;
     cursor: pointer;
     color: black;
-    font-size: 16px;
+    margin: 0 8px;
 }
 
 #submitButton:hover {

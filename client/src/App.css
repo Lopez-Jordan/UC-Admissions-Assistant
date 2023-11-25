@@ -14,6 +14,17 @@
 .content1, .content2 {
     padding: 5%;
 }
+.content1{
+    display: flex;
+    flex-direction: column;
+}
+#chatHeader{
+    float: right;
+    color: white;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: lighter;
+}
 
 #message {
     color: white;
@@ -24,6 +35,7 @@
     letter-spacing: 1px;
     float: left;
 }
+
 
 #mainHeading {
     color: white;

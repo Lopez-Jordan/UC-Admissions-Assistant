@@ -8,8 +8,9 @@ export default function App() {
       <section className="page1">
         <div className="half1">
           <div className="content1">
-            <h2 id='message'>ask a ...</h2>
+            <h2 id='message'>ask anything to a...</h2>
             <h1 id='mainHeading'>UC Admission Officer</h1>
+            <h2 id="chatHeader">(ai chatbot)</h2>
           </div>
           <img id="emblem" src="/emblem.png" alt="" />
           <div style={{height: '200px'}}></div>
