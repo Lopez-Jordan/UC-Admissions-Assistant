@@ -1,45 +1,44 @@
-import './Chatbot.css';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { getResponse } from '../../utils/LLM';
+import './Chatbot.css';
 
 export default function Chatbot() {
+  const [message, setMessage] = useState("");
+  const [response, setResponse] = useState("");
+  const [fullChat, setFullChat] = useState([]);
 
-    const [message, setMessage] = useState("");
-    const [response, setResponse] = useState("");
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-    
-        try {
-            const result = await getResponse(message);
-            setResponse(result);
-            alert(result);
-        } catch (error) {
-            console.error(error);
-        }
-    
-                // run it in the model // don't forget to add user + chatbot response in the memory array!
-        // also update the stateful memory array in local storage the same way you did it in the memory array **make the memory array only able to hold 5 chats between user and computer
-        // display the input on the right
-        // display output on the left
-
-        // setMessage("");
+    try {
+      const result = await getResponse(message);
+      setResponse(result);
+      setFullChat(prevFullChat => [
+        ...prevFullChat,
+        { role: 'user', content: message },
+        { role: 'chatbot', content: result },
+      ]);
+      setResponse("");
+      setMessage("");
+    } catch (error) {
+      console.error(error);
     }
-    
+  };
 
-    useEffect(() => {
-        // gather things from local storage
-        // load the 5 array items into the chatbot window
-
-    }, [])
+  useEffect(() => {
+    // gather things from local storage
+    // load the 5 array items into the chatbot window
+  }, [])
 
     return (
         <div className='main'>
             <div id='chats'>
-                Chats go here
+                {fullChat.map((chat, index) => (
+                    <div key={index} className={`message ${chat.role}`}>
+                        {chat.content}
+                    </div>
+                ))}
             </div>
-            <h1>{import.meta.env.VITE_SOME_KEY}</h1>
-            <h1>{import.meta.env.VITE_OPENAI_API_KEY}</h1>
             <form onSubmit={handleSubmit} className="input-container">
                 <textarea
                     onChange={(e) => setMessage(e.target.value)}
