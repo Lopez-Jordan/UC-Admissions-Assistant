@@ -5,7 +5,7 @@ import { retriever } from './retriever.js'
 import { combineDocuments } from './combineDocuments.js'
 import { RunnablePassthrough, RunnableSequence } from "langchain/schema/runnable";
 
-const openAIApiKey = "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"
+const openAIApiKey = "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"
 
 const llm = new ChatOpenAI({ 
     openAIApiKey,

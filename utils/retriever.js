@@ -2,7 +2,7 @@ import { SupabaseVectorStore } from 'langchain/vectorstores/supabase'
 import { OpenAIEmbeddings } from 'langchain/embeddings/openai'
 import { createClient } from '@supabase/supabase-js'
 
-const openAIApiKey = "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"
+const openAIApiKey = "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"
 const sbApiKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Ind6Y2pmemNvd3FpaHZxZmZkaXBjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDA3ODYwMzIsImV4cCI6MjAxNjM2MjAzMn0.4tXulAp3PihSFgyJtFZUGBQZr1VmFZ1daUJ-iyWl9RA"
 const sbUrl = "https://wzcjfzcowqihvqffdipc.supabase.co"
 
